@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Zoom
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body
+        header
+            h1 Zoom
+        main
+            div#welcome
+                form
+                    input#join(type="text", placeholder="room name", required)
+                    input#name(type="text", placeholder="username", required)
+                    button Enter
+                h4 Open Rooms
+                ul
+            div#room
+                h3
+                ul
+                form#msg
+                    input(type="text", placeholder="message", required)
+                    button Send 
+            //- form#nick
+            //-     input(type="text", placeholder="choose a nickname", required)
+            //-     button Save
+            //- ul
+            //- form#message
+            //-     input(type="text", placeholder="write a message", required)
+            //-     button Send
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js")
